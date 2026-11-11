@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & FAQs | IT Ticket System</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+    <style>
+        .help-container {
+            max-width: 1100px;
+            margin: 45px auto;
+            padding: 30px;
+        }
+
+        .help-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .help-header h1 {
+            color: #2563eb;
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .help-header p {
+            color: #64748b;
+            font-size: 16px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .faq-card {
+            background: white;
+            padding: 25px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .faq-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .faq-card h2 {
+            color: #1e40af;
+            font-size: 20px;
+            margin: 0 0 12px;
+        }
+
+        .faq-card p {
+            color: #64748b;
+            font-size: 15px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .help-footer {
+            text-align: center;
+            margin-top: 35px;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .help-footer h2 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+
+        .help-footer p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .help-button {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: 600;
+        }
+
+        .help-button:hover {
+            background: #1d4ed8;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 650px) {
+            .help-container {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .help-header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="help-container">
+
+        <header class="help-header">
+            <h1>Help & FAQs</h1>
+            <p>Find quick solutions to common IT problems.</p>
+        </header>
+
+        <section class="faq-grid">
+
+            <div class="faq-card">
+                <h2>Internet Not Working</h2>
+                <p>Check your Wi-Fi connection, restart your router, and reconnect to the network.</p>
+            </div>
+
+            <div class="faq-card">
+                <h2>Computer Not Starting</h2>
+                <p>Check the power cable, charger and power connection. Try restarting your computer.</p>
+            </div>
+
+            <div class="faq-card">
+                <h2>Software Installation Problem</h2>
+                <p>Check whether you have permission to install the software. Contact your IT administrator if needed.</p>
+            </div>
+
+            <div class="faq-card">
+                <h2>Printer Not Working</h2>
+                <p>Check the printer connection, paper supply and printer status.</p>
+            </div>
+
+            <div class="faq-card">
+                <h2>Login Problem</h2>
+                <p>Verify your email and password. If you still cannot log in, contact your IT administrator.</p>
+            </div>
+
+        </section>
+
+        <section class="help-footer">
+            <h2>Still Facing a Problem?</h2>
+            <p>Submit a support ticket and let the IT team help you.</p>
+            <a href="/new-ticket" class="help-button">Raise a Support Ticket</a>
+        </section>
+
+        <a href="/dashboard" class="back-link">← Back to Dashboard</a>
+
+    </main>
+
+</body>
+</html>

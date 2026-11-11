@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | IT Ticket System</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+    <style>
+        .admin-dashboard {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+        }
+
+        .admin-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .admin-header h1 {
+            color: #2563eb;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .admin-header p {
+            color: #64748b;
+            font-size: 16px;
+        }
+
+        .admin-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .admin-card {
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .admin-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+        }
+
+        .admin-card h2 {
+            color: #1e40af;
+            font-size: 22px;
+            margin: 0 0 12px;
+        }
+
+        .admin-card p {
+            color: #64748b;
+            font-size: 15px;
+            line-height: 1.6;
+            min-height: 48px;
+        }
+
+        .admin-card a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .admin-card a:hover {
+            background: #1d4ed8;
+        }
+
+        .admin-back {
+            display: inline-block;
+            margin-top: 30px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .admin-back:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 800px) {
+            .admin-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 550px) {
+            .admin-dashboard {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .admin-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .admin-header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="admin-dashboard">
+
+        <header class="admin-header">
+            <h1>Admin Dashboard</h1>
+            <p>Manage IT tickets, employees and technicians.</p>
+        </header>
+
+        <section class="admin-grid">
+
+            <div class="admin-card">
+                <h2>All Tickets</h2>
+                <p>View and manage all IT complaints submitted by employees.</p>
+                <a href="/admin/tickets">View Tickets</a>
+            </div>
+
+            <div class="admin-card">
+                <h2>Manage Employees</h2>
+                <p>View registered employees and manage their accounts.</p>
+                <a href="/admin/users">View Employees</a>
+            </div>
+
+            <div class="admin-card">
+                <h2>Manage Technicians</h2>
+                <p>View and manage technicians in your IT support team.</p>
+                <a href="/admin/technicians">View Technicians</a>
+            </div>
+
+        </section>
+
+        <a class="admin-back" href="/dashboard">← Back to Dashboard</a>
+
+    </main>
+
+</body>
+</html>
